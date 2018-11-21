@@ -1,0 +1,31 @@
+<p>
+  Question
+</p>
+<input type="text" [(ngModel)]= 'question.question' value="question.question">
+<p>
+  Animal it's about
+</p>
+<input type="text" [(ngModel)]= 'question.animal'>
+<p>
+  difficulty
+</p>
+<input type="range" min="1" max="3" value="2" [(ngModel)]= 'question.difficulty'>
+<p>
+  Options
+</p>
+<ng-container *ngFor="let option of (question.options | objectValues); let $index = index">
+  <input type="radio" name="correct-answer" [value]="$index + 1" [checked]="question.correct_answer == $index + 1"> 
+  <input type="text" [(ngModel)] = 'question.options[$index + 1]'>
+</ng-container>
+<!-- <input type="radio" name="correct-answer" value=2 [(ngModel)]='question.correct_answer'>
+<input type="text" [(ngModel)] = 'question.options[2]'>
+<input type="radio" name="correct-answer" value=3 [(ngModel)]='question.correct_answer'>
+<input type="text" [(ngModel)] = 'question.options[3]'>
+<input type="radio" name="correct-answer" value=4 [(ngModel)]='question.correct_answer'>
+<input type="text" [(ngModel)] = 'question.options[4]'> -->
+
+<div>
+  <button *ngIf='question._id' (click)='deleteQuestion(question._id)'>Delete Question</button>
+  <button mat-raised-button (click)='addQuestion()'>Save Question</button>
+  <button (click)='hideForm.emit()'>Cancel</button>
+</div>

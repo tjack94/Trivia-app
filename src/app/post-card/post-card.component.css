@@ -1,0 +1,44 @@
+:host{
+    width: 75%
+}
+mat-card{
+    /* border: grey solid 1px; */
+    width: 100%;
+    margin: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.question-title{
+    display: flex;
+    justify-content: space-between;
+}
+.easy{
+    background-color: green;
+}
+.medium{
+    background-color: yellow;
+}
+.hard{
+    background-color: rgb(224, 32, 144);
+}
+.correct{
+    background-color: green
+}
+.incorrect{
+    background-color: rgb(224, 32, 144);
+}
+.answer{
+    cursor: pointer;
+}
+.settings{
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+    margin: 10px;
+}
+.settings-container{
+    display: flex;
+    align-items: center;
+}

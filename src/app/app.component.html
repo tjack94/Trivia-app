@@ -1,0 +1,10 @@
+<header>
+        <div class='container'>
+                <h1>
+                  Trivia Trends
+                </h1>
+                <button (click)='showHideForm()'>+ Add Question</button>
+                </div>
+            </header>
+<app-add-new-question [question]= 'question'(hideForm)='showHideForm()' *ngIf='displayForm'></app-add-new-question>
+<app-posts (edit)='editQuestion($event)' [posts] = 'posts'></app-posts>

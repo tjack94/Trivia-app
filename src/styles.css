@@ -1,0 +1,10 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+button{
+    background-color: rgb(1, 206, 241);
+    padding: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Roboto', sans-serif; }

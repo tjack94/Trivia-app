@@ -1,0 +1,10 @@
+<div>
+<button (click)='reset()'>All Questions</button>
+<button (click)='filterDifficulty(1)'>Easy</button>
+<button (click)='filterDifficulty(2)'>Medium</button>
+<button (click)='filterDifficulty(3)'>Hard</button>
+<button (click)='showHideSearch()'>Search By Animal</button>
+</div>
+<input *ngIf= 'displaySearch' type="text" [(ngModel)]= 'search' placeholder="Type An Animal to Search by">
+<app-post-card (edit)= 'editQuestion($event)' *ngFor="let post of (posts | filterPosts: difficulty : search)" [post]= "post"></app-post-card>
+
